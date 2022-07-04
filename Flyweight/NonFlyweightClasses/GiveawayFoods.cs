@@ -3,22 +3,19 @@ using Flyweight.FlyweightInterface;
 
 namespace Flyweight.NonFlyweightClasses;
 
-public class FoodsGiveaway : IFoodFlyweight
+public class GiveawayFoods : IFoodFlyweight
 {
-    public string Title
-    {
-        get { return _randomFood.Title; }
-    }
-
-    private IFoodFlyweight[] _eligibleFoods = new IFoodFlyweight[] {
+    private string _type;
+    public string Title { get { return _randomFood.Title; } }
+    
+    private readonly IFoodFlyweight _randomFood;
+    
+    private readonly IFoodFlyweight[] _eligibleFoods = new IFoodFlyweight[] {
         new Kebab(),
         new Sandwich()
     };
 
-
-    private IFoodFlyweight _randomFood;
-    private string _type;
-    public FoodsGiveaway()
+    public GiveawayFoods()
     {
         var randomIndex = new Random().Next(0, 2);
         _randomFood = _eligibleFoods[randomIndex];
@@ -27,7 +24,6 @@ public class FoodsGiveaway : IFoodFlyweight
     public void Cook(string type)
     {
         _type = type;
-        Console.WriteLine($"Free Giveaway!");
         Console.WriteLine($"- {_type} {_randomFood.Title} is coming up! ");
     }
 }

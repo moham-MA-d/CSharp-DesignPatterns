@@ -15,8 +15,8 @@ public class Sandwich : IFoodFlyweight
         _ingredients = new List<string>()
         {
             "Meatball",
-            "Sauce ",
-            "Cheese "
+            "Sauce",
+            "Cheese"
         };
     }
 
