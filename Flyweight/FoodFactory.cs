@@ -25,7 +25,7 @@ public class FoodFactory
         {
             "Kebab" => new Kebab(),
             "Sandwich" => new Sandwich(),
-            _ => throw new Exception("This is not a flyweight food object..."),
+            _ => throw new Exception("This is not a flyweight food object."),
         };
 
         _foodCache.Add(foodKey, food);
@@ -36,8 +36,8 @@ public class FoodFactory
 
     public void ListFoods()
     {
-        Console.WriteLine($"\nFactory has {_foodCache.Count} food objects ready to use.");
         Console.WriteLine($"Number of objects created: {ObjectsCreated}");
+        Console.WriteLine($"\n Factory has {_foodCache.Count} food objects ready to use.");
 
         foreach (var food in _foodCache)
             Console.WriteLine($"\t {food.Value.Title}");
@@ -47,6 +47,6 @@ public class FoodFactory
 
     public static IFoodFlyweight CreateGiveaway()
     {
-        return new FoodsGiveaway();
+        return new GiveawayFoods();
     }
 }
