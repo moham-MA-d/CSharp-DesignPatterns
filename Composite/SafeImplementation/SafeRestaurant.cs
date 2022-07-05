@@ -6,7 +6,6 @@ public static class SafeRestaurant
     {
         Console.WriteLine("====================SafeRestaurant====================");
         var restaurant = new SafeComposite("Restaurant");
-        restaurant.Add (new SafeLeaf("Name: Star Restaurant"));
 
         var foods = new SafeComposite ("Foods");
         restaurant.Add (foods);
@@ -16,17 +15,16 @@ public static class SafeRestaurant
         foods.Add(traditional);
         foods.Add(fastFood);
 
-        fastFood.Add(new SafeLeaf("Pizza"));
-        fastFood.Add(new SafeLeaf("Sandwich"));
+        fastFood.Add(new SafeLeaf("Pizza",76));
+        fastFood.Add(new SafeLeaf("Sandwich",29));
 
-        traditional.Add(new SafeLeaf("Kebab"));
-        traditional.Add(new SafeLeaf("Chicken"));
-
-        var employee = new SafeLeaf ("Employee");
-        restaurant.Add (employee);
-        restaurant.Remove (employee);
+        traditional.Add(new SafeLeaf("Kebab",65));
+        traditional.Add(new SafeLeaf("Chicken",55));
 
         // Recursively display nodes 
-        restaurant.Display (1);
+        restaurant.GetMenu (1);
+        Console.WriteLine("Restaurant Order(s) Count : " + restaurant.GetOrdersCount());
+        Console.WriteLine("Traditional foods Order(s) Count : " + traditional.GetOrdersCount());
+        Console.WriteLine("Fast foods Order(s) Count : " + fastFood.GetOrdersCount());
     }
 }

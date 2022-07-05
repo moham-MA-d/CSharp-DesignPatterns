@@ -1,9 +1,9 @@
-﻿namespace Composite.SafeImplementation;
+﻿namespace Composite.WithBuilderPattern.SafeImplementation;
 
-internal class SafeLeaf : SafeComponent
+public class SafeLeafWb : SafeComponentWb
 {
     private readonly int _order;
-    public SafeLeaf(string name, int order) : base(name)
+    public SafeLeafWb(string name, int order) : base(name)
     {
         _order = order;
     }
