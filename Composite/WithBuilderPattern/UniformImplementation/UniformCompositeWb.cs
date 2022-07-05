@@ -1,16 +1,16 @@
-﻿namespace Composite.SafeImplementation;
-internal class SafeComposite : SafeComponent
+﻿namespace Composite.WithBuilderPattern.UniformImplementation;
+public class UniformCompositeWb : UniformComponentWb
 {
-    public SafeComposite(string name) : base(name) { }
+    public UniformCompositeWb(string name) : base(name) { }
 
-    private readonly List<SafeComponent> _children = new();
+    public readonly List<UniformComponentWb> _children = new();
 
-    public void Add(SafeComponent c)
+    public override void Add(UniformComponentWb c)
     {
         _children.Add(c);
     }
 
-    public void Remove(SafeComponent c)
+    public override void Remove(UniformComponentWb c)
     {
         _children.Remove(c);
     }

@@ -11,5 +11,7 @@ internal abstract class UniformComponent
 
     public abstract void Add(UniformComponent c);
     public abstract void Remove(UniformComponent c);
-    public abstract void Display(int depth);
+    public abstract void GetMenu(int depth);
+    public abstract int GetOrdersCount();
+
 }

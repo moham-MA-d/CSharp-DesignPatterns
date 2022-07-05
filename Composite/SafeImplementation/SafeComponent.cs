@@ -8,5 +8,6 @@ internal abstract class SafeComponent
     {
         _name = name;
     }
-    public abstract void Display(int depth);
+    public abstract void GetMenu(int depth);
+    public abstract int GetOrdersCount();
 }

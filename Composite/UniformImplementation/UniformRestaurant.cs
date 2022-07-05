@@ -5,7 +5,6 @@ public static class UniformRestaurant
     {
         Console.WriteLine("====================UniformRestaurant====================");
         var restaurant = new UniformComposite("Restaurant");
-        restaurant.Add (new UniformLeaf("Name: Star Restaurant"));
 
         var foods = new UniformComposite ("Foods");
         restaurant.Add (foods);
@@ -15,18 +14,21 @@ public static class UniformRestaurant
         foods.Add(traditional);
         foods.Add(fastFood);
 
-        fastFood.Add(new UniformLeaf("Pizza"));
-        fastFood.Add(new UniformLeaf("Sandwich"));
+        fastFood.Add(new UniformLeaf("Pizza",76));
+        fastFood.Add(new UniformLeaf("Sandwich",29));
 
-        traditional.Add(new UniformLeaf("Kebab"));
-        traditional.Add(new UniformLeaf("Chicken"));
+        traditional.Add(new UniformLeaf("Kebab",65));
+        traditional.Add(new UniformLeaf("Chicken",55));
 
-        var employee = new UniformLeaf ("Employee");
-        employee.Add(new UniformLeaf("Waiter")); // A Uniform Leaf Cannot Implement Add Method
-        restaurant.Add (employee);
-        restaurant.Remove (employee);
+        var drinks = new UniformLeaf ("Drinks",0);
+        drinks.Add(new UniformLeaf("Water",10)); // A Uniform Leaf Cannot Implement Add Method
+        restaurant.Add (drinks);
+        restaurant.Remove (drinks);
 
         // Recursively display nodes 
-        restaurant.Display (1);
+        restaurant.GetMenu (1);
+        Console.WriteLine("Restaurant Order(s) Count : " + restaurant.GetOrdersCount());
+        Console.WriteLine("Traditional foods Order(s) Count : " + traditional.GetOrdersCount());
+        Console.WriteLine("Fast foods Order(s) Count : " + fastFood.GetOrdersCount());
     }
 }
