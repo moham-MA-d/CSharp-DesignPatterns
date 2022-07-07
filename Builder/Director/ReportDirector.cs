@@ -1,6 +1,7 @@
 ﻿using Builder.Builder;
 namespace Builder.Director;
 
+//Director doesn't know how an object is built.
 public class ReportDirector
 {
     private readonly IReportBuilder _builder;
