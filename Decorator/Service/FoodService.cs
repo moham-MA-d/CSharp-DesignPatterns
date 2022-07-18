@@ -4,7 +4,7 @@ namespace Decorator.Service;
 
 public class FoodService : IFoodService
 {
-    public IEnumerable<Food> GetFoods()
+    public List<Food> GetFoods()
     {
         var foods = new List<Food>
         {

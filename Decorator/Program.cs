@@ -7,15 +7,15 @@ IFoodService foodService = new FoodService();
 IFoodService cachedFoodService = new CachedFoodService(cache, foodService);
 
 Console.WriteLine("====================Foods From Server====================");
-var foods = cachedFoodService.GetFoods();
-foreach (var food in foods)
+var firstCallForFoods = cachedFoodService.GetFoods();
+foreach (var food in firstCallForFoods)
 {
     Console.WriteLine($"Food name: {food.Name} Price: {food.Price} ");
 }
 
-Console.WriteLine("====================Foods From Cache by Decorator====================");
-var foods1 = cachedFoodService.GetFoods();
-foreach (var food in foods1)
+Console.WriteLine("\n ====================Foods From Cache by Decorator====================");
+var secondCallForFoods = cachedFoodService.GetFoods();
+foreach (var food in secondCallForFoods)
 {
     Console.WriteLine($"Food name: {food.Name} Price: {food.Price} ");
 }
