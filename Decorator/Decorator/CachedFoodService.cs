@@ -14,20 +14,18 @@ public class CachedFoodService : IFoodService
         _cache = cache;
         _foodService = foodService;
     }
-    public IEnumerable<Food> GetFoods()
+
+    public List<Food> GetFoods()
     {
-        
-        var cacheKey = "FoodMenu";
-        if (_cache.TryGetValue<IEnumerable<Food>>(cacheKey, out var foods))
+        const string cacheKey = "FoodMenu";
+        if (_cache.TryGetValue<List<Food>>(cacheKey, out var foods))
         {
             Console.WriteLine("Cached Result");
             return foods;
         }
-        else
-        {
-            var currentConditions = _foodService.GetFoods();
-            _cache.Set<IEnumerable<Food>>(cacheKey, currentConditions, TimeSpan.FromMinutes(19));
-            return currentConditions;
-        }
+
+        var foodsMenu = _foodService.GetFoods();
+        _cache.Set(cacheKey, foodsMenu, TimeSpan.FromMinutes(19));
+        return foodsMenu;
     }
 }
