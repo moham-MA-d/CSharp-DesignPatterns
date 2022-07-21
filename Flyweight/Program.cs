@@ -3,7 +3,7 @@
 var foodFactory = new FoodFactory();
 
 
-Console.WriteLine("-------------- Flytweight Objects -------------");
+Console.WriteLine("-------------- Flyweight Objects -------------");
 
 
 foodFactory.GetFood("Kebab").Cook("Classic");
@@ -11,7 +11,7 @@ foodFactory.GetFood("Sandwich").Cook("Special");
 foodFactory.GetFood("Kebab").Cook("Brand-made");
 
 
-Console.WriteLine("-------------- Non-Flytweight Objects -------------");
+Console.WriteLine("-------------- Non-Flyweight Objects -------------");
 
 
 var types = new string[] { "Classic", "Special", "Brand-made" };
