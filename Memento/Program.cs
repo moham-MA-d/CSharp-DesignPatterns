@@ -1,31 +1,24 @@
 ﻿using Memento;
-using Memento.Models;
 
-var pizza = new Food
-{
-    Name = "Pizza"
-};
-var kebab = new Food
-{
-    Name = "Kebab"
-};
+var order = new Order();
+var history = new OrderStateHistory();
 
-var shoppingCart = new ShoppingCart();
-var history = new ShoppingCartStateHistory();
+Console.WriteLine("====================Memento Pattern====================");
 
-shoppingCart.AddFood(pizza);
-history.Push(shoppingCart.CreateState());
+order.CreateOrder("Pizza");
+history.Push(order.CreateState());
 
-shoppingCart.AddFood(kebab);
-history.Push(shoppingCart.CreateState());
+order.CreateOrder("Kebab");
+history.Push(order.CreateState());
 
-shoppingCart.Restore(history.Pop());
+order.CreateOrder("Sandwich");
+history.Push(order.CreateState());
 
-var foods = shoppingCart.GetFoods();
-foreach (var food in foods)
-{
-    Console.WriteLine(food.Name);
-}
+order.Undo(history.Pop());
+order.Undo(history.Pop());
+
+var lastOrder = order.GetOrder();
+Console.WriteLine(lastOrder);
 
 Console.ReadKey();
 
