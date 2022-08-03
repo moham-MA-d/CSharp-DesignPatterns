@@ -4,10 +4,10 @@ using Builder.Models;
 
 var items = new List<Food>
 {
-    new Food("Sandwich", 10, Food.Size.Medium),
-    new Food("Pizza", 10, Food.Size.Medium),
-    new Food("Kebab", 10, Food.Size.Large),
-    new Food("Chicken", 10, Food.Size.Small),
+    new ("Sandwich", 10, Food.Size.Medium),
+    new ("Pizza", 10, Food.Size.Medium),
+    new ("Kebab", 10, Food.Size.Large),
+    new ("Chicken", 10, Food.Size.Small),
 };
 
 var reportBuilder = new ReportBuilder(items);
