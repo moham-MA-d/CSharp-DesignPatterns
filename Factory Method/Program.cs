@@ -1,6 +1,4 @@
-﻿
-            
-using Factory_Method.Enum;
+﻿using Factory_Method.Enum;
 using Factory_Method.Factory;
 
 Console.WriteLine("====================Factory Method====================");

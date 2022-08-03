@@ -2,8 +2,7 @@
 
 var foodFactory = new FoodFactory();
 
-
-Console.WriteLine("-------------- Flyweight Objects -------------");
+Console.WriteLine("====================Flyweight Objects====================");
 
 
 foodFactory.GetFood("Kebab").Cook("Classic");
@@ -11,10 +10,10 @@ foodFactory.GetFood("Sandwich").Cook("Special");
 foodFactory.GetFood("Kebab").Cook("Brand-made");
 
 
-Console.WriteLine("-------------- Non-Flyweight Objects -------------");
+Console.WriteLine("====================Non-Flyweight Objects====================");
 
 
-var types = new string[] { "Classic", "Special", "Brand-made" };
+var types = new [] { "Classic", "Special", "Brand-made" };
 foreach (var count in types)
 {
     var giveaway = FoodFactory.CreateGiveaway();
@@ -22,7 +21,7 @@ foreach (var count in types)
 }
 
 
-Console.WriteLine("-------------- List -------------");
+Console.WriteLine("====================List====================");
 
 
 foodFactory.ListFoods();
