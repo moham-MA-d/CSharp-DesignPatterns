@@ -1,9 +1,13 @@
-﻿namespace Strategy.Models;
+﻿using Strategy.Strategy.Cook;
+using Strategy.Strategy.Payment;
+
+namespace Strategy.Models;
 
 public class Kebab : Food
 {
-    public override void Cook()
+    public override void Cook(ICookStrategy cookStrategy, IPaymentStrategy paymentStrategy)
     {
-        Console.WriteLine($"A Kebab is cooking in {CookStrategy.Cook()} with Price: {CookStrategy.Price(Price)}");
+        Console.WriteLine($"A Kebab is cooking in {cookStrategy.Cook()} with Price: {cookStrategy.Price(Price)}");
     }
+
 }

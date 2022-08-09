@@ -1,6 +1,4 @@
-﻿using Strategy.Models;
-
-namespace Strategy.Strategy;
+﻿namespace Strategy.Strategy.Cook;
 
 public interface ICookStrategy
 {
