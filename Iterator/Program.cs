@@ -1,8 +1,7 @@
-﻿// Build a collection
+﻿using Iterator.Iterator;
 
-using Iterator.Iterator;
-
-var collection = new Collection
+Console.WriteLine("====================Iterator implementation with a class====================");
+var foodsClass = new FoodCollection
 {
     [0] = new ("Pizza"),
     [1] = new ("Kebab"),
@@ -10,17 +9,32 @@ var collection = new Collection
     [3] = new ("Chicken"),
 };
 
+var iteratorClass = foodsClass.CreateIterator();
+iteratorClass.Step = 2;
 
-var iterator = collection.CreateIterator();
-
-iterator.Step = 2;
-
-Console.WriteLine("Iterating over collection:");
-
-for (var food = iterator.First();
-     !iterator.IsDone; food = iterator.Next())
+for (var food = iteratorClass.First();
+     !iteratorClass.IsDone; food = iteratorClass.Next())
 {
     Console.WriteLine(food.Name);
+}
+
+
+
+Console.WriteLine("====================Iterator implementation with string====================");
+var foodsStringArray = new StringArrayCollection()
+{
+    [0] = "Pizza",
+    [1] = "Kebab",
+    [2] = "Sandwich",
+    [3] = "Chicken",
+};
+var iteratorStringArray = foodsStringArray.CreateIterator();
+iteratorStringArray.Step = 2;
+
+for (var food = iteratorStringArray.First();
+     !iteratorStringArray.IsDone; food = iteratorStringArray.Next())
+{
+    Console.WriteLine(food);
 }
 
 Console.ReadKey();

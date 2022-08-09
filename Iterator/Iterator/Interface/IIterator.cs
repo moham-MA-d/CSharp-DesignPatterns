@@ -1,6 +1,6 @@
 ﻿namespace Iterator.Iterator;
 
-public interface IIterator<T>
+public interface IIterator<out T>
 {
     T First();
     T Next();

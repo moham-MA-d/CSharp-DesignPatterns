@@ -1,4 +1,4 @@
-﻿namespace Iterator.Iterator;
+﻿namespace Iterator.Models;
 
 public class Food
 {
