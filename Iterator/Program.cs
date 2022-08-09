@@ -21,7 +21,7 @@ for (var food = iteratorClass.First();
 
 
 Console.WriteLine("====================Iterator implementation with string====================");
-var foodsStringArray = new StringArrayCollection()
+var foodsStringArray = new StringCollection()
 {
     [0] = "Pizza",
     [1] = "Kebab",

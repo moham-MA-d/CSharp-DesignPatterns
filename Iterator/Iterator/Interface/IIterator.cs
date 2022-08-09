@@ -1,4 +1,4 @@
-﻿namespace Iterator.Iterator;
+﻿namespace Iterator.Iterator.Interface;
 
 public interface IIterator<out T>
 {

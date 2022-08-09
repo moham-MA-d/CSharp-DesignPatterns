@@ -2,7 +2,7 @@
 
 namespace Iterator.Iterator;
 
-public class FoodCollection : ICollection<FoodIterator>
+public class FoodCollection : Interface.ICollection<FoodIterator>
 {
     private readonly List<Food> _foods = new ();
 

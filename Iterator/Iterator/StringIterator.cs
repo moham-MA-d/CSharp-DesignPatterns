@@ -1,12 +1,14 @@
-﻿namespace Iterator.Iterator;
+﻿using Iterator.Iterator.Interface;
 
-public class StringArrayIterator : IIterator<string>
+namespace Iterator.Iterator;
+
+public class StringIterator : IIterator<string>
 {
     private int _step = 1;
     private int _current = 0;
-    private readonly StringArrayCollection _foodCollection;
+    private readonly StringCollection _foodCollection;
 
-    public StringArrayIterator(StringArrayCollection foodCollection)
+    public StringIterator(StringCollection foodCollection)
     {
         _foodCollection = foodCollection;
     }

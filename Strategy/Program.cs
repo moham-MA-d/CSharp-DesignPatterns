@@ -1,21 +1,13 @@
 ﻿using Strategy.Models;
-using Strategy.Strategy;
+using Strategy.Strategy.Cook;
+using Strategy.Strategy.Payment;
 
 Console.WriteLine("====================Strategy====================");
-
-var pizzaInSlowMode = new Pizza()
+var pizza = new Pizza()
 {
-    Price = 10,
-    CookStrategy = new SlowCookStrategy()
+    Price = 10
 };
-pizzaInSlowMode.Cook();
-
-var pizzaInFastMode = new Pizza()
-{
-    Price = 10,
-    CookStrategy = new FastCookStrategy()
-};
-pizzaInFastMode.Cook();
+pizza.Cook(new SlowCookStrategy(), new MasterCardStrategy());
 
 
 

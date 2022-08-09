@@ -1,12 +1,12 @@
 ﻿namespace Iterator.Iterator;
 
-public class StringArrayCollection : ICollection<StringArrayIterator>
+public class StringCollection : Interface.ICollection<StringIterator>
 {
     private readonly List<string> _foods = new();
 
-    public StringArrayIterator CreateIterator()
+    public StringIterator CreateIterator()
     {
-        return new StringArrayIterator(this);
+        return new StringIterator(this);
     }
 
     public int Count => _foods.Count;
