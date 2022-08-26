@@ -4,6 +4,6 @@ public class MasterCardStrategy : IPaymentStrategy
 {
     public string Payment()
     {
-        return "Visa";
+        return "MasterCard";
     }
 }

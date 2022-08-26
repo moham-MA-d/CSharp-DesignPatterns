@@ -6,7 +6,7 @@ public abstract class Food
 {
     private readonly Restaurant _restaurant;
     
-    protected Food(){_restaurant = new Restaurant();}
+    protected Food() { _restaurant = new Restaurant(); }
     protected Food(Restaurant restaurant)
     {
         _restaurant = restaurant;
