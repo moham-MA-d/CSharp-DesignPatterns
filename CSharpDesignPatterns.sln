@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "TemplateMethod\TemplateMethod.csproj", "{53D80334-7C38-457D-B2A6-085E7DE94AC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{F8C79925-A61A-4736-9DDB-1B34D6CB2547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{53D80334-7C38-457D-B2A6-085E7DE94AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53D80334-7C38-457D-B2A6-085E7DE94AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53D80334-7C38-457D-B2A6-085E7DE94AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C79925-A61A-4736-9DDB-1B34D6CB2547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C79925-A61A-4736-9DDB-1B34D6CB2547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C79925-A61A-4736-9DDB-1B34D6CB2547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C79925-A61A-4736-9DDB-1B34D6CB2547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +169,7 @@ Global
 		{80EE1780-1130-4F2E-B3D8-BA293EAE659F} = {39DF8AA6-11BC-4889-94A4-02DCF669EB11}
 		{D9ACC14F-A746-4656-8ACA-C2D0CFA29F63} = {39DF8AA6-11BC-4889-94A4-02DCF669EB11}
 		{53D80334-7C38-457D-B2A6-085E7DE94AC6} = {39DF8AA6-11BC-4889-94A4-02DCF669EB11}
+		{F8C79925-A61A-4736-9DDB-1B34D6CB2547} = {39DF8AA6-11BC-4889-94A4-02DCF669EB11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {51D45F7D-4BC6-4B13-AD36-FDF7AF44EF14}
