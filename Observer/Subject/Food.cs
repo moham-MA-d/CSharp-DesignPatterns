@@ -1,23 +1,22 @@
 using Observer.Observer;
 namespace Observer.Subject;
-
-public class Food
+public class Food : IFood
 {
     
-    private float _price;
+    private int _price;
     private readonly string _name;
     private readonly List<IObserver> _observers = new(); 
 
-    public Food(string name, float price) {
+    public Food(string name, int price) {
         _name = name;
         _price = price;
     }
 
-    public float GetPrice() {
+    public int GetPrice() {
         return _price;
     }
 
-    public void SetPrice(float price) {
+    public void SetPrice(int price) {
         _price = price;
         NotifyObservers();
     }
@@ -38,9 +37,9 @@ public class Food
     }
     
     public override string ToString() {
-        return "Food {" +
-               "Name= '" + _name + '\'' +
-               ", Price=" + _price +
-               '}';
+        return " Food { " +
+               " Name= " + _name +
+               " , Price=" + _price +
+               '}' ;
     }
 }
