@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Chain_Of_Responsibility;
+﻿using Chain_Of_Responsibility;
 using Chain_Of_Responsibility.Handlers;
 using Chain_Of_Responsibility.Handlers.RestaurantHandlers;
 using Chain_Of_Responsibility.Models;

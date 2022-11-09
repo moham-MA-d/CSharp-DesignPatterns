@@ -4,8 +4,10 @@ using Mediator.ConcreteMediator;
 var teamChat = new RestaurantChatHub();
 
 var clientTeamUser = new ClientTeam("client 1");
-var sellTeamUser = new SellTeam("sell1 "); 
+var sellTeamUser = new SellTeam("sell 1 "); 
 var supportTeamUser = new SupportTeam("support 1");
+
+Console.WriteLine("====================Mediator Pattern====================");
 
 teamChat.RegisterColleaguesBatch(clientTeamUser, sellTeamUser, supportTeamUser);
 

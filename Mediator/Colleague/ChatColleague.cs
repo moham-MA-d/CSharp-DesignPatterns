@@ -7,11 +7,10 @@ public abstract class ChatColleague
     private ChatHub _chatHub;
     protected string Name { get; }
 
-    public ChatColleague(string name)
+    protected ChatColleague(string name)
     {
         Name = name;
     }
-
 
     internal void SetChatroom(ChatHub chatHub)
     {
