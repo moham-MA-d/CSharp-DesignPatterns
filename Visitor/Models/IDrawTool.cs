@@ -1,6 +1,4 @@
-
 using Visitor.Visitor;
-
 namespace Visitor.Models;
 
 public interface IDrawTool {
