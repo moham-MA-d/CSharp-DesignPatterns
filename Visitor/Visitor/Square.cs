@@ -3,7 +3,7 @@ using Visitor.Models;
 
 namespace Visitor.Visitor;
 
-public class Square : IOperation {
+public class Square : IShape {
   public void Apply(Pen pen) {
     Console.WriteLine("drawing square by pen");
   }
