@@ -3,8 +3,8 @@ namespace Visitor.Models;
 
 public class Pencil : IDrawTool
 {
-    public void Draw(IOperation operation)
+    public void Draw(IShape shape)
     {
-        operation.Apply(this);
+        shape.Apply(this);
     }
 }

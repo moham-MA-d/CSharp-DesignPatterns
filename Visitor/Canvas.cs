@@ -10,8 +10,8 @@ public class Canvas {
     _tools.Add(tool);
   }
 
-  public void Draw(IOperation operation) {
+  public void Draw(IShape shape) {
     foreach (var tool in _tools)
-      tool.Draw(operation);
+      tool.Draw(shape);
   }
 }
