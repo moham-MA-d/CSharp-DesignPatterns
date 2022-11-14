@@ -1,4 +1,4 @@
-﻿namespace Memento;
+﻿namespace Memento.Memento;
 
 public class OrderState
 {
