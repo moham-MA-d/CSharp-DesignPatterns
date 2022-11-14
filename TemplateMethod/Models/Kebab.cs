@@ -12,8 +12,8 @@ public class Kebab : Food
         Console.WriteLine($"{nameof(Kebab)} is Cooking");
     }
 
-    protected override void Design()
+    protected override void Decorate()
     {
-        Console.WriteLine($"{nameof(Kebab)} is Designing");
+        Console.WriteLine($"{nameof(Kebab)} is Decorating");
     }
 }

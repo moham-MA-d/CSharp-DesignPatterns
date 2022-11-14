@@ -3,9 +3,8 @@
 var pizza = new Pizza();
 var kebab = new Kebab();
 
-Console.WriteLine("====================TemplateMethod====================");
+Console.WriteLine("====================TemplateMethod Pattern====================");
 pizza.Order();
 
-Console.WriteLine("====================TemplateMethod====================");
 kebab.Order();
 

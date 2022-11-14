@@ -18,11 +18,11 @@ public abstract class Food
         
         PrepareIngredients();
         Cook();
-        Design();
+        Decorate();
     }
 
     protected abstract void PrepareIngredients();
     protected abstract void Cook();
-    protected abstract void Design();
+    protected abstract void Decorate();
     
 }

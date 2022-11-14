@@ -1,6 +1,6 @@
 ﻿namespace TemplateMethod.TemplateMethod;
 
-public  class Restaurant
+public class Restaurant
 {
     public void OrderFood()
     {

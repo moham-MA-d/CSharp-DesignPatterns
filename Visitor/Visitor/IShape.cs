@@ -1,6 +1,4 @@
-
 using Visitor.Models;
-
 namespace Visitor.Visitor;
 
 public interface IShape {

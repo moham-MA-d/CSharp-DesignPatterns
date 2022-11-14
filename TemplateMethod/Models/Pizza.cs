@@ -12,9 +12,9 @@ public class Pizza : Food
         Console.WriteLine($"{nameof(Pizza)} is Cooking");
     }
 
-    protected override void Design()
+    protected override void Decorate()
     {
-        Console.WriteLine($"{nameof(Pizza)} is Designing");
+        Console.WriteLine($"{nameof(Pizza)} is Decorating");
     }
     
 }

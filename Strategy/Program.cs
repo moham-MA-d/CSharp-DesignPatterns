@@ -2,7 +2,7 @@
 using Strategy.Strategy.Cook;
 using Strategy.Strategy.Payment;
 
-Console.WriteLine("====================Strategy====================");
+Console.WriteLine("====================Strategy Pattern====================");
 var pizza = new Pizza()
 {
     Price = 10
