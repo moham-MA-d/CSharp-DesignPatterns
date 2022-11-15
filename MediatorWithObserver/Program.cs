@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using MediatorWithObserver;
+using MediatorWithObserver.Mediator;
 
-Console.WriteLine("Hello, World!");
+var dialog = new Modal();
+dialog.Display();
